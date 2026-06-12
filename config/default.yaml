@@ -1,0 +1,19 @@
+# LLM Prompt Protection — default scanner configuration
+scanners:
+  injection:
+    enabled: true
+    severity: block
+  adversarial:
+    enabled: true
+    severity: warn
+  canary:
+    enabled: false  # requires LLM_PRIVACY_HMAC_KEY env var
+  data-leakage:
+    enabled: true
+    severity: warn
+  tool-abuse:
+    enabled: true
+    severity: block
+
+timeouts:
+  scannerTimeoutMs: 450  # fits within 500ms hook latency budget
