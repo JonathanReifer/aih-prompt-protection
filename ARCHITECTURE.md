@@ -1,5 +1,11 @@
 # LLM Security Stack — Architecture
 
+> **Canonical location:** This file has been superseded. See
+> [`../aih-security/ARCHITECTURE.md`](../aih-security/ARCHITECTURE.md) for the current
+> architecture doc including the harness adapter layer.
+
+
+
 Four projects that work as a unified LLM security layer. Each project has a distinct job;
 they compose through a module interface, not hard dependencies.
 

@@ -1,5 +1,11 @@
 # LLM Security Stack — Quickstart
 
+> **Canonical location:** This file has been superseded. See
+> [`../aih-security/QUICKSTART.md`](../aih-security/QUICKSTART.md) for the up-to-date
+> installation guide with Mac support, unified installer, and all tiers.
+
+
+
 End-to-end installation guide for a vanilla Debian box with Claude Code. Three tiers —
 install just what you need, add more later.
 
