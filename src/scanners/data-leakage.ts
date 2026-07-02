@@ -27,6 +27,7 @@ export class DataLeakageScanner {
           description: `Privacy token about to be exfiltrated via tool call: ${orphaned[0]![0]}`,
           severity: "block",
           atlasTechnique: "AML.T0024",
+          owaspCategory: "LLM02",
           detail: { tokenCount: orphaned.length, firstToken: orphaned[0]![0] },
         });
       } else if (event === "Stop") {
@@ -35,6 +36,7 @@ export class DataLeakageScanner {
           description: `LLM response contains ${orphaned.length} unreplaced privacy token(s)`,
           severity: "warn",
           atlasTechnique: "AML.T0057",
+          owaspCategory: "LLM02",
           detail: { tokenCount: orphaned.length },
         });
       }
@@ -49,6 +51,7 @@ export class DataLeakageScanner {
             description: `PII pattern in LLM response: ${name}`,
             severity: "warn",
             atlasTechnique: "AML.T0057",
+            owaspCategory: "LLM02",
           });
         }
       }

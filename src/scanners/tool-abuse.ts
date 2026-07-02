@@ -36,6 +36,7 @@ export class ToolAbuseScanner {
           description: "Privacy token being sent to external URL via shell command",
           severity: "block",
           atlasTechnique: "AML.T0098",
+          owaspCategory: "LLM06",
         });
       }
 
@@ -46,6 +47,7 @@ export class ToolAbuseScanner {
             description: desc,
             severity: "block",
             atlasTechnique: "AML.T0085",
+            owaspCategory: "LLM06",
           });
         }
       }
@@ -60,6 +62,7 @@ export class ToolAbuseScanner {
             description: `${desc}: ${filePath}`,
             severity: "block",
             atlasTechnique: "AML.T0085",
+            owaspCategory: "LLM06",
           });
         }
       }

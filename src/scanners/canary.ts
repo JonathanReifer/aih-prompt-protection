@@ -33,6 +33,7 @@ export class CanaryScanner {
           description: `Canary token about to be exfiltrated via tool call: ${token}`,
           severity: "block",
           atlasTechnique: "AML.T0057",
+          owaspCategory: "LLM02",
           detail: { token },
         });
       } else if (event === "Stop") {
@@ -41,6 +42,7 @@ export class CanaryScanner {
           description: `Canary token in LLM response — possible context poisoning: ${token}`,
           severity: "warn",
           atlasTechnique: "AML.T0080",
+          owaspCategory: "LLM01",
           detail: { token },
         });
       }

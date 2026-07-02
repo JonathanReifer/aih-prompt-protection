@@ -41,6 +41,7 @@ export class AdversarialScanner {
           description: "Invisible Unicode characters used to obfuscate injection attempt",
           severity: "block",
           atlasTechnique: "AML.T0043",
+          owaspCategory: "LLM01",
           detail: { invisibleCharCount: (text.match(/[​‌‍­‮‭⁠]/g) ?? []).length },
         });
       } else {
@@ -49,6 +50,7 @@ export class AdversarialScanner {
           description: "Invisible Unicode characters detected in input",
           severity: "warn",
           atlasTechnique: "AML.T0043",
+          owaspCategory: "LLM01",
         });
       }
     }
@@ -67,6 +69,7 @@ export class AdversarialScanner {
               description: `Base64-encoded injection attempt: "${decoded.slice(0, 60)}"`,
               severity: "block",
               atlasTechnique: "AML.T0043",
+              owaspCategory: "LLM01",
             });
             break;
           }
@@ -95,6 +98,7 @@ export class AdversarialScanner {
           description: "Cyrillic homoglyphs used to obfuscate injection keywords",
           severity: "block",
           atlasTechnique: "AML.T0043",
+          owaspCategory: "LLM01",
         });
       }
     }

@@ -29,6 +29,7 @@ export class InjectionScanner {
     const normalized = text.normalize("NFKC");
     const isIndirect = event === "PostToolResult";
     const atlasTechnique = isIndirect ? "AML.T0054" : "AML.T0051";
+    const owaspCategory = "LLM01";
     const severity = isIndirect ? "warn" as const : "block" as const;
 
     const findings: ScanFinding[] = [];
@@ -39,6 +40,7 @@ export class InjectionScanner {
         description: "Imperative ignore-previous-instructions pattern detected",
         severity,
         atlasTechnique,
+        owaspCategory,
       });
     }
 
